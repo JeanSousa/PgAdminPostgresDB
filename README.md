@@ -28,11 +28,15 @@ docker-compose up -d
       <td>Portas</td>
   </tr>
   <tr>
-      <td>Mariadb</td>
-      <td>3306</td>
+      <td>Postgres</td>
+      <td>5432</td>
   </tr>
    <tr>
-      <td>Phpmyadmin</td>
+      <td>pgadmin</td>
       <td>127.0.0.1:8080</td>
   </tr>
 </table>
+
+# Conexao
+![image](https://github.com/JeanSousa/PgAdminPostgresDB/assets/38965322/0b468bd0-7e44-4d1e-880f-d825f272b55b)
+
