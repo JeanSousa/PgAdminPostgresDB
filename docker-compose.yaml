@@ -1,0 +1,35 @@
+version: '3.8'
+
+networks:
+  postgres_network:
+    driver: bridge
+
+volumes:
+  postgres_vol:
+
+services:
+  pgadmin:
+    image: dpage/pgadmin4:${PGADMIN_TAG}
+    restart: always
+    depends_on:
+      - postgresdb
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - 8080:80
+    networks:
+      - postgres_network
+
+
+  postgresdb:
+    image: postgres:${POSTGRES_TAG}
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_vol:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - postgres_network
