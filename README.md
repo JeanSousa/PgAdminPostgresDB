@@ -4,17 +4,17 @@ Docker compose mariadb and phpmyadmin
 
 ## Como rodar a aplicação
 ### Crie um .env e ajuste as variaveis como no .env.example
-# set the version of pgadmin image
+#### set the version of pgadmin image
 PGADMIN_TAG=latest
-# set the version of postgres image
+#### set the version of postgres image
 POSTGRES_TAG=latest
-# email pgadmin
+#### email pgadmin
 PGADMIN_DEFAULT_EMAIL=pgadmin4@pgadmin.org
-# password pgadmin
+#### password pgadmin
 PGADMIN_DEFAULT_PASSWORD=admin
-# postgres user
+#### postgres user
 POSTGRES_USER=postgresusr
-# postgres password
+#### postgres password
 POSTGRES_PASSWORD=postgrespwd
 
 #### Na raiz do projeto rode:
