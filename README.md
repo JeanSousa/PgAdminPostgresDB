@@ -1,5 +1,5 @@
-# ExpressAndMongoDB
-Docker compose mariadb and phpmyadmin
+# PGAdminAndPostgres
+Docker compose pgadmin and postgres
 
 
 ## Como rodar a aplicação
