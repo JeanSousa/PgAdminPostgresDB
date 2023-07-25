@@ -6,6 +6,7 @@ networks:
 
 volumes:
   postgres_vol:
+  pgadmin_vol:
 
 services:
   pgadmin:
@@ -13,6 +14,8 @@ services:
     restart: always
     depends_on:
       - postgresdb
+    volumes:
+      - pgadmin_vol:/var/lib/pgadmin
     environment:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
